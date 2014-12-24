@@ -1,0 +1,38 @@
+url: 'https://api.github.com/gists/ada597c7292cebab4bc0'
+forks_url: 'https://api.github.com/gists/ada597c7292cebab4bc0/forks'
+commits_url: 'https://api.github.com/gists/ada597c7292cebab4bc0/commits'
+id: ada597c7292cebab4bc0
+git_pull_url: 'https://gist.github.com/ada597c7292cebab4bc0.git'
+git_push_url: 'https://gist.github.com/ada597c7292cebab4bc0.git'
+html_url: 'https://gist.github.com/ada597c7292cebab4bc0'
+files:
+    get_it_for_me.php: { filename: get_it_for_me.php, type: application/x-httpd-php, language: PHP, raw_url: 'https://gist.githubusercontent.com/alnutile/ada597c7292cebab4bc0/raw/9746ac4e0ac6612186866448e6d75fe0363cea57/get_it_for_me.php', size: 1095, truncated: false, content: "#!/usr/bin/php\n<?php\nfunction get_image($query){\n    $url = 'http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=';\n    $url .= urlencode(\"site:www.thebrickfan.com \" . $query . \" lego\");\n    $curl = curl_init();\n    curl_setopt($curl, CURLOPT_URL, $url);\n    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);\n    $data = curl_exec($curl);\n    curl_close($curl);\n    $result = json_decode($data, true);\n    return $result;\n}\n\nfunction get_name($image)\n{\n\t$name = explode('/', $image);\n\treturn array_pop($name);\n}\nexec(\"say \\\"what is your favorite lego guy\\\"\");\necho 'what is your favorite lego guy?';\n$guy = fgets(STDIN);\nexec(\"say \\\"Going to get your image of {$guy} be right back\\\"\");\n//Get Guy from Image Site\n$image = get_image($guy);\n//Get random image\n$max = count($image['responseData']['results']);\nif($max == 0)\n{\n\texec(\"say 'No image found, sorry'\");\n\techo \"No image found :(\";\n} \nelse \n{\n\t$image = $image['responseData']['results'][rand(0, $max - 1)]['url'];\n\t$name = get_name($image);\n\tfile_put_contents('/tmp/' . $name, file_get_contents($image));\n\texec(\"open /tmp/$name\");\n}" }
+public: true
+created_at: '2014-12-20T15:07:30Z'
+updated_at: '2014-12-20T15:17:32Z'
+description: '[kid snippets] PHP and Mac needed'
+comments: 0
+user:
+    login: alnutile
+    id: 365385
+    avatar_url: 'https://avatars.githubusercontent.com/u/365385?v=3'
+    gravatar_id: ''
+    url: 'https://api.github.com/users/alnutile'
+    html_url: 'https://github.com/alnutile'
+    followers_url: 'https://api.github.com/users/alnutile/followers'
+    following_url: 'https://api.github.com/users/alnutile/following{/other_user}'
+    gists_url: 'https://api.github.com/users/alnutile/gists{/gist_id}'
+    starred_url: 'https://api.github.com/users/alnutile/starred{/owner}{/repo}'
+    subscriptions_url: 'https://api.github.com/users/alnutile/subscriptions'
+    organizations_url: 'https://api.github.com/users/alnutile/orgs'
+    repos_url: 'https://api.github.com/users/alnutile/repos'
+    events_url: 'https://api.github.com/users/alnutile/events{/privacy}'
+    received_events_url: 'https://api.github.com/users/alnutile/received_events'
+    type: User
+    site_admin: false
+comments_url: 'https://api.github.com/gists/ada597c7292cebab4bc0/comments'
+forks: {  }
+history:
+    - { user: { login: alnutile, id: 365385, avatar_url: 'https://avatars.githubusercontent.com/u/365385?v=3', gravatar_id: '', url: 'https://api.github.com/users/alnutile', html_url: 'https://github.com/alnutile', followers_url: 'https://api.github.com/users/alnutile/followers', following_url: 'https://api.github.com/users/alnutile/following{/other_user}', gists_url: 'https://api.github.com/users/alnutile/gists{/gist_id}', starred_url: 'https://api.github.com/users/alnutile/starred{/owner}{/repo}', subscriptions_url: 'https://api.github.com/users/alnutile/subscriptions', organizations_url: 'https://api.github.com/users/alnutile/orgs', repos_url: 'https://api.github.com/users/alnutile/repos', events_url: 'https://api.github.com/users/alnutile/events{/privacy}', received_events_url: 'https://api.github.com/users/alnutile/received_events', type: User, site_admin: false }, version: 69c1430e2d93a30c3296097d098feaba9ee66b89, committed_at: '2014-12-20T15:17:32Z', change_status: { total: 16, additions: 12, deletions: 4 }, url: 'https://api.github.com/gists/ada597c7292cebab4bc0/69c1430e2d93a30c3296097d098feaba9ee66b89' }
+    - { user: { login: alnutile, id: 365385, avatar_url: 'https://avatars.githubusercontent.com/u/365385?v=3', gravatar_id: '', url: 'https://api.github.com/users/alnutile', html_url: 'https://github.com/alnutile', followers_url: 'https://api.github.com/users/alnutile/followers', following_url: 'https://api.github.com/users/alnutile/following{/other_user}', gists_url: 'https://api.github.com/users/alnutile/gists{/gist_id}', starred_url: 'https://api.github.com/users/alnutile/starred{/owner}{/repo}', subscriptions_url: 'https://api.github.com/users/alnutile/subscriptions', organizations_url: 'https://api.github.com/users/alnutile/orgs', repos_url: 'https://api.github.com/users/alnutile/repos', events_url: 'https://api.github.com/users/alnutile/events{/privacy}', received_events_url: 'https://api.github.com/users/alnutile/received_events', type: User, site_admin: false }, version: c2216e10d54ceb829a8898718e88b2432022ec64, committed_at: '2014-12-20T15:13:23Z', change_status: { total: 4, additions: 3, deletions: 1 }, url: 'https://api.github.com/gists/ada597c7292cebab4bc0/c2216e10d54ceb829a8898718e88b2432022ec64' }
+    - { user: { login: alnutile, id: 365385, avatar_url: 'https://avatars.githubusercontent.com/u/365385?v=3', gravatar_id: '', url: 'https://api.github.com/users/alnutile', html_url: 'https://github.com/alnutile', followers_url: 'https://api.github.com/users/alnutile/followers', following_url: 'https://api.github.com/users/alnutile/following{/other_user}', gists_url: 'https://api.github.com/users/alnutile/gists{/gist_id}', starred_url: 'https://api.github.com/users/alnutile/starred{/owner}{/repo}', subscriptions_url: 'https://api.github.com/users/alnutile/subscriptions', organizations_url: 'https://api.github.com/users/alnutile/orgs', repos_url: 'https://api.github.com/users/alnutile/repos', events_url: 'https://api.github.com/users/alnutile/events{/privacy}', received_events_url: 'https://api.github.com/users/alnutile/received_events', type: User, site_admin: false }, version: 811f1b8d6cde1c708d9086423548d45b0186d12d, committed_at: '2014-12-20T15:07:30Z', change_status: { total: 29, additions: 29, deletions: 0 }, url: 'https://api.github.com/gists/ada597c7292cebab4bc0/811f1b8d6cde1c708d9086423548d45b0186d12d' }

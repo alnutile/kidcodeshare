@@ -1,0 +1,36 @@
+url: 'https://api.github.com/gists/6280793d8f81ed27b610'
+forks_url: 'https://api.github.com/gists/6280793d8f81ed27b610/forks'
+commits_url: 'https://api.github.com/gists/6280793d8f81ed27b610/commits'
+id: 6280793d8f81ed27b610
+git_pull_url: 'https://gist.github.com/6280793d8f81ed27b610.git'
+git_push_url: 'https://gist.github.com/6280793d8f81ed27b610.git'
+html_url: 'https://gist.github.com/6280793d8f81ed27b610'
+files:
+    say.php: { filename: say.php, type: application/x-httpd-php, language: PHP, raw_url: 'https://gist.githubusercontent.com/alnutile/6280793d8f81ed27b610/raw/5d57ad26fd44e2ec1d1bac7956dc455c95267daa/say.php', size: 160, truncated: false, content: "#!/usr/bin/php\n<?php\n$arg = $argv[1];\n$voices = ['Good News', 'Zarvox', 'Bahh'];\n\nforeach (range(1, 108) as $v) {\n   exec(\"say -v {$voices[rand(0,3)]} $arg\");\n}" }
+public: true
+created_at: '2014-12-21T02:53:16Z'
+updated_at: '2014-12-21T02:53:17Z'
+description: 'Zeke''s code 1'
+comments: 0
+user:
+    login: alnutile
+    id: 365385
+    avatar_url: 'https://avatars.githubusercontent.com/u/365385?v=3'
+    gravatar_id: ''
+    url: 'https://api.github.com/users/alnutile'
+    html_url: 'https://github.com/alnutile'
+    followers_url: 'https://api.github.com/users/alnutile/followers'
+    following_url: 'https://api.github.com/users/alnutile/following{/other_user}'
+    gists_url: 'https://api.github.com/users/alnutile/gists{/gist_id}'
+    starred_url: 'https://api.github.com/users/alnutile/starred{/owner}{/repo}'
+    subscriptions_url: 'https://api.github.com/users/alnutile/subscriptions'
+    organizations_url: 'https://api.github.com/users/alnutile/orgs'
+    repos_url: 'https://api.github.com/users/alnutile/repos'
+    events_url: 'https://api.github.com/users/alnutile/events{/privacy}'
+    received_events_url: 'https://api.github.com/users/alnutile/received_events'
+    type: User
+    site_admin: false
+comments_url: 'https://api.github.com/gists/6280793d8f81ed27b610/comments'
+forks: {  }
+history:
+    - { user: { login: alnutile, id: 365385, avatar_url: 'https://avatars.githubusercontent.com/u/365385?v=3', gravatar_id: '', url: 'https://api.github.com/users/alnutile', html_url: 'https://github.com/alnutile', followers_url: 'https://api.github.com/users/alnutile/followers', following_url: 'https://api.github.com/users/alnutile/following{/other_user}', gists_url: 'https://api.github.com/users/alnutile/gists{/gist_id}', starred_url: 'https://api.github.com/users/alnutile/starred{/owner}{/repo}', subscriptions_url: 'https://api.github.com/users/alnutile/subscriptions', organizations_url: 'https://api.github.com/users/alnutile/orgs', repos_url: 'https://api.github.com/users/alnutile/repos', events_url: 'https://api.github.com/users/alnutile/events{/privacy}', received_events_url: 'https://api.github.com/users/alnutile/received_events', type: User, site_admin: false }, version: 0906e53f7d0bc23051719e24e9b76696fb360160, committed_at: '2014-12-21T02:53:16Z', change_status: { total: 8, additions: 8, deletions: 0 }, url: 'https://api.github.com/gists/6280793d8f81ed27b610/0906e53f7d0bc23051719e24e9b76696fb360160' }
