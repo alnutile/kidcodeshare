@@ -1,4 +1,4 @@
-<?php
+<?php namespace CodeShare;
 
 use Illuminate\Database\Migrations\Migration;
 
