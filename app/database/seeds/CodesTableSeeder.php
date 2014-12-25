@@ -9,8 +9,8 @@ class CodesTableSeeder extends Seeder {
 		$faker = Faker::create();
 
         $gists = [
-            '30252d71be6cdd01769e',
-            'c95957d1c806f92804fd'
+            'b9a337e8d320a847744d',
+            '74c61d58d427aeba519a'
         ];
         $user = User::where('email', 'me@alfrednutile.info')->first();
 		foreach(range(1, 10) as $index)

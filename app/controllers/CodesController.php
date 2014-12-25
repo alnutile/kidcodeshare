@@ -74,7 +74,9 @@ class CodesController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+        $code = Code::find($id);
+        $account = getenv('git_user');
+        return View::make('codes.show', compact('code', 'account'));
 	}
 
 	/**
