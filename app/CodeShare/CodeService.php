@@ -56,6 +56,23 @@ class CodeService {
         return $results['id'];
     }
 
+    public function updateGist($id, $store)
+    {
+        $code = Code::findOrFail($id);
+        $params = [
+            'description' => $store['title'],
+            'public'      => 1,
+            'files'       => [
+                "{$store['name']}" => [
+                    'content' => "{$store['code']}"
+                ]
+            ]
+        ];
+        $results = $this->getClient()->api('gists')->update($code->gist_id, $params);
+
+        return $results['id'];
+    }
+
     public function getGists()
     {
         foreach($this->code as $key => $code)

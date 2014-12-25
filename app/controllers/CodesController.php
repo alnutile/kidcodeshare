@@ -88,7 +88,9 @@ class CodesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$code = Code::findOrFail($id);
+        $gist = $this->codeService->getGist($code->gist_id);
+        return View::make('codes.edit', compact('code', 'gist'));
 	}
 
 	/**
@@ -100,7 +102,27 @@ class CodesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		//Make sure only owner can save this
+        $validator = Validator::make(Input::all(), Code::$rules);
+
+        if($validator->fails())
+        {
+            $messages = $validator->messages();
+            return Redirect::to("codes/$id/edit")->withErrors($validator)->withInput();
+        }
+
+        try
+        {
+            $results = $this->codeService->updateGist($id, Input::all());
+            $here = link_to('codes/' . $id, 'here', $attributes = array(), $secure = null);
+            Session::flash('notice', "Updated Code click $here to visit it.");
+            return Redirect::to('/');
+        }
+        catch(\Execption $e)
+        {
+            return Redirect::to('/')->withMessage($e->getMessage());
+        }
+
 	}
 
 	/**
@@ -125,9 +147,7 @@ class CodesController extends \BaseController {
      */
     public function index()
     {
-        $code = Code::all();
-        $account = getenv('git_user');
-        return View::make('codes.index', compact('code', 'account'));
+        return Redirect::to('/');
     }
 
 }

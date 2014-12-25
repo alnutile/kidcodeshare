@@ -13,6 +13,10 @@
                   </div>
                   <div class="panel-body">
                     <script src="https://gist.github.com/{{$account}}/{{$code->gist_id}}.js"></script>
+
+                    @if(Auth::user() && Auth::user()->id == $code->user_id)
+                        <a href="/codes/{{$code->id}}/edit" class="btn btn-warning">edit</a>
+                    @endif
                   </div>
                 </div>
             </div>

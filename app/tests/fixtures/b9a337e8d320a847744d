@@ -1,0 +1,36 @@
+url: 'https://api.github.com/gists/b9a337e8d320a847744d'
+forks_url: 'https://api.github.com/gists/b9a337e8d320a847744d/forks'
+commits_url: 'https://api.github.com/gists/b9a337e8d320a847744d/commits'
+id: b9a337e8d320a847744d
+git_pull_url: 'https://gist.github.com/b9a337e8d320a847744d.git'
+git_push_url: 'https://gist.github.com/b9a337e8d320a847744d.git'
+html_url: 'https://gist.github.com/b9a337e8d320a847744d'
+files:
+    say.php: { filename: say.php, type: application/x-httpd-php, language: PHP, raw_url: 'https://gist.githubusercontent.com/kidcodeshare/b9a337e8d320a847744d/raw/5d57ad26fd44e2ec1d1bac7956dc455c95267daa/say.php', size: 160, truncated: false, content: "#!/usr/bin/php\n<?php\n$arg = $argv[1];\n$voices = ['Good News', 'Zarvox', 'Bahh'];\n\nforeach (range(1, 108) as $v) {\n   exec(\"say -v {$voices[rand(0,3)]} $arg\");\n}" }
+public: true
+created_at: '2014-12-25T00:43:21Z'
+updated_at: '2014-12-25T00:43:21Z'
+description: 'Say Code'
+comments: 0
+user:
+    login: kidcodeshare
+    id: 10257197
+    avatar_url: 'https://avatars.githubusercontent.com/u/10257197?v=3'
+    gravatar_id: ''
+    url: 'https://api.github.com/users/kidcodeshare'
+    html_url: 'https://github.com/kidcodeshare'
+    followers_url: 'https://api.github.com/users/kidcodeshare/followers'
+    following_url: 'https://api.github.com/users/kidcodeshare/following{/other_user}'
+    gists_url: 'https://api.github.com/users/kidcodeshare/gists{/gist_id}'
+    starred_url: 'https://api.github.com/users/kidcodeshare/starred{/owner}{/repo}'
+    subscriptions_url: 'https://api.github.com/users/kidcodeshare/subscriptions'
+    organizations_url: 'https://api.github.com/users/kidcodeshare/orgs'
+    repos_url: 'https://api.github.com/users/kidcodeshare/repos'
+    events_url: 'https://api.github.com/users/kidcodeshare/events{/privacy}'
+    received_events_url: 'https://api.github.com/users/kidcodeshare/received_events'
+    type: User
+    site_admin: false
+comments_url: 'https://api.github.com/gists/b9a337e8d320a847744d/comments'
+forks: {  }
+history:
+    - { user: { login: kidcodeshare, id: 10257197, avatar_url: 'https://avatars.githubusercontent.com/u/10257197?v=3', gravatar_id: '', url: 'https://api.github.com/users/kidcodeshare', html_url: 'https://github.com/kidcodeshare', followers_url: 'https://api.github.com/users/kidcodeshare/followers', following_url: 'https://api.github.com/users/kidcodeshare/following{/other_user}', gists_url: 'https://api.github.com/users/kidcodeshare/gists{/gist_id}', starred_url: 'https://api.github.com/users/kidcodeshare/starred{/owner}{/repo}', subscriptions_url: 'https://api.github.com/users/kidcodeshare/subscriptions', organizations_url: 'https://api.github.com/users/kidcodeshare/orgs', repos_url: 'https://api.github.com/users/kidcodeshare/repos', events_url: 'https://api.github.com/users/kidcodeshare/events{/privacy}', received_events_url: 'https://api.github.com/users/kidcodeshare/received_events', type: User, site_admin: false }, version: f110e6c792304aa7292778aa6cc18177f6e39de7, committed_at: '2014-12-25T00:43:21Z', change_status: { total: 8, additions: 8, deletions: 0 }, url: 'https://api.github.com/gists/b9a337e8d320a847744d/f110e6c792304aa7292778aa6cc18177f6e39de7' }

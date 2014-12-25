@@ -14,6 +14,9 @@
               </div>
               <div class="panel-body">
                 <script src="https://gist.github.com/{{$account}}/{{$item->gist_id}}.js"></script>
+                <div class="row">
+                    <a href="/codes/{{$code->id}}" class="btn btn-warning">view</a>
+                </div>
               </div>
             </div>
             </div>
