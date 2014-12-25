@@ -34,6 +34,8 @@ Route::get('users/reset_password/{token}', 'UsersController@resetPassword');
 Route::post('users/reset_password', 'UsersController@doResetPassword');
 Route::get('users/logout', 'UsersController@logout');
 
+Route::get('codes/{id}', 'CodesController@show');
+
 Route::group(array('before'=>'auth'), function() {
     Route::resource('codes', 'CodesController');
     Route::get('codes/mine/{user_id}', 'CodesController@mine');
